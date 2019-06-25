@@ -55,31 +55,31 @@ Usage: "check_vcsa_mon.php" -H "<hostname>"  -f  "/path/to/authfile" -a "<api co
 
 	This plugin will check the condition of Access/Service/Health/Monitoring/Storage Indicators for a VCenter Appliance via the REST API.
 	Examples:
+	
 	     Health
-         $/usr/bin/php -q ".PROGRAM." -H "192.168.1.1" -f  "/my/path/configs/192.168.1.1.cfg" -a "health" -c "yellow" -o "system"
+         $/usr/bin/php -q check_vcsa_mon.php -H "192.168.1.1" -f  "/my/path/configs/192.168.1.1.cfg" -a "health" -c "yellow" -o "system"
          
          Complete list of services
-         $/usr/bin/php -q ".PROGRAM." -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "servicelist" 
+         $/usr/bin/php -q check_vcsa_mon.php -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "servicelist" 
          
          Service status
-         $/usr/bin/php -q ".PROGRAM." -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "service" -c "up" -o "xinitd" 
+         $/usr/bin/php -q check_vcsa_mon.php -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "service" -c "up" -o "xinitd" 
          
          Access status
-         $/usr/bin/php -q ".PROGRAM." -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "access" -c "enabled" -o "ssh" 
+         $/usr/bin/php -q check_vcsa_mon.php -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "access" -c "enabled" -o "ssh" 
          
          Datastore List
-         $/usr/bin/php -q ".PROGRAM." -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "datastorelist" -c "" -o "" 
+         $/usr/bin/php -q check_vcsa_mon.php -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "datastorelist" -c "" -o "" 
          
          Datastore Free Space
-         $/usr/bin/php -q ".PROGRAM." -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "monitoring" -c "10" -u "B,MB,GB,TB" -o "datastore" -m "free" 
+         $/usr/bin/php -q check_vcsa_mon.php -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "monitoring" -c "10" -u "B,MB,GB,TB" -o "datastore" -m "free" 
          
          CPU Load Monitoring
-         $/usr/bin/php -q ".PROGRAM." -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "monitoring" -c "15" -u "%" -o "cpu" 
+         $/usr/bin/php -q check_vcsa_mon.php -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "monitoring" -c "15" -u "%" -o "cpu" 
          
          Memory Usage Monitoring
-         $/usr/bin/php -q ".PROGRAM." -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "monitoring" -c "95" -u "B,MB,GB,TB" -o "mem" 
+         $/usr/bin/php -q check_vcsa_mon.php -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "monitoring" -c "95" -u "B,MB,GB,TB" -o "mem" 
          
          File System Usage Monitoring
-         $/usr/bin/php -q ".PROGRAM." -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "monitoring" -c "10" -u "MB" -o "fsystem" -m "root,log,boot" 
-         $/usr/bin/php -q ".PROGRAM." -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "monitoring" -c "10" -u "KB" -o "fsystem" -m "imagebuilder"
-         "
+         $/usr/bin/php -q check_vcsa_mon.php -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "monitoring" -c "10" -u "MB" -o "fsystem" -m "root,log,boot" 
+         $/usr/bin/php -q check_vcsa_mon.php -H "192.168.1.1" -f "/my/path/configs/192.168.1.1.cfg" -a "monitoring" -c "10" -u "KB" -o "fsystem" -m "imagebuilder"
